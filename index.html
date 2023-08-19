@@ -18,17 +18,17 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-[#F8F8F8]">
     <!-- banner part starts -->
     <section class="bg-[#F9F6E2] mb-4">
         <!-- banner container -->
-        <div class="flex flex-col md:flex-row md:justify-center md:items-center md:gap-24">
+        <div class="flex flex-col-reverse md:flex-row md:justify-center md:items-center md:gap-24">
             <!-- banner texts -->
             <div class="text-center pt-4 pb-4 pr-2 pl-2">
                 <p class="font-semibold text-[18px]">---SALE FEVER---</p>
                 <h2 class="text-[28px] font-bold md:text-[36px] md:mt-4">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h2>
                 <p class="text-[14px] font-semibold mt-2 md:mt-4">User Promo Code &nbsp;
-                    <span class="bg-[#E527B2] rounded-lg text-white p-2 px-4">SELL200</span>
+                    <span class="bg-[#E527B2] rounded-md text-white p-2 px-4">SELL200</span>
                 </p>
             </div>
             <!-- banner image -->
@@ -39,7 +39,7 @@
     </section>
     <!-- banner part ends -->
     <!-- products card and cart starts -->
-    <section class="mb-4 bg-[#F8F8F8]">
+    <section class="mb-4 pb-4 bg-[#F8F8F8]">
         <!-- products card and cart container-->
         <div class="flex flex-col xl:flex-row xl:gap-8 xl:justify-center">
             <!-- products card container -->
@@ -49,8 +49,8 @@
                 <h2 class="text-[28px] text-center font-bold mb-2 md:pl-6 md:text-left">Kitchenware</h2>
                 <div class="flex flex-col justify-center items-center gap-4 md:flex-row md:justify-start md:pl-6">
                     <!-- kw1 -->
-                <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
-                    <figure class="bg-gray-200 p-5"><img src="images/prod1.png" alt="Shoes" /></figure>
+                <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-kw1">
+                    <figure class="bg-gray-200 p-4"><img src="images/prod1.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
                             <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
@@ -59,16 +59,16 @@
                             <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
-                        K. Accessories 
+                      <h2 class="card-title" id="pn-kw1">
+                        Spoons Set
                       </h2>
-                      <p><span>39.00</span> TK</p>
+                      <p><span id="kw1-price">39.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
                   </div>
                   <!-- kw2 -->
-                  <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
+                  <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-kw2">
                     <figure class="bg-gray-200 p-4"><img src="images/prod2.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
@@ -78,17 +78,17 @@
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
-                        K. Accessories 
+                      <h2 class="card-title" id="pn-kw2">
+                        Cutting Boards Set 
                       </h2>
-                      <p><span>25.00</span> TK</p>
+                      <p><span id="kw2-price">25.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
                   </div>
                   <!-- kw3 -->
-                  <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
-                    <figure class="bg-gray-200 p-5"><img src="images/prod3.png" alt="Shoes" /></figure>
+                  <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-kw3">
+                    <figure class="bg-gray-200 p-4"><img src="images/prod3.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
                             <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
@@ -97,10 +97,10 @@
                             <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
+                      <h2 class="card-title" id="pn-kw3">
                         Home Cooker 
                       </h2>
-                      <p><span>49.00</span> TK</p>
+                      <p><span id="kw3-price">49.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
@@ -111,9 +111,9 @@
             <div class="mt-6 md:mt-8">
                 <h2 class="text-[28px] text-center font-bold mb-2 md:pl-6 md:text-left">Sportswear</h2>
                 <div class="flex flex-col justify-center items-center gap-4 md:flex-row md:justify-start md:pl-6">
-                    <!-- kw1 -->
-                <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
-                    <figure class="bg-gray-200 p-5"><img src="images/prod4.png" alt="Shoes" /></figure>
+                    <!-- sw1 -->
+                <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-sw1">
+                    <figure class="bg-gray-200 p-4"><img src="images/prod4.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
                             <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
@@ -122,16 +122,16 @@
                             <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
+                      <h2 class="card-title" id="pn-sw1">
                         Sports Back Cap 
                       </h2>
-                      <p><span>49.00</span> TK</p>
+                      <p><span id="sw1-price">49.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
                   </div>
-                  <!-- kw2 -->
-                  <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
+                  <!-- sw2 -->
+                  <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-sw2">
                     <figure class="bg-gray-200 p-4"><img src="images/prod5.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
@@ -141,16 +141,16 @@
                             <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
+                      <h2 class="card-title" id="pn-sw2">
                         Full Jersey Set 
                       </h2>
-                      <p><span>69.00</span> TK</p>
+                      <p><span id="sw2-price">69.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
                   </div>
-                  <!-- kw3 -->
-                  <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
+                  <!-- sw3 -->
+                  <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-sw3">
                     <figure class="bg-gray-200 p-4"><img src="images/prod6.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
@@ -160,10 +160,10 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
+                      <h2 class="card-title" id="pn-sw3">
                         Sport Snicker
                       </h2>
-                      <p><span>159.00</span> TK</p>
+                      <p><span id="sw3-price">159.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
@@ -175,8 +175,8 @@
             <div class="mt-6 md:mt-8">
                 <h2 class="text-[28px] text-center font-bold mb-2 md:pl-6 md:text-left">Furniture</h2>
                 <div class="flex flex-col justify-center items-center gap-4 md:flex-row md:justify-start md:pl-6">
-                    <!-- kw1 -->
-                <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
+                    <!-- frn1 -->
+                <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-frn1">
                     <figure class="bg-gray-200 p-4"><img src="images/prod7.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
@@ -186,16 +186,16 @@
                             <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
+                      <h2 class="card-title" id="pn-frn1">
                         Single Relax Chair 
                       </h2>
-                      <p><span>185.00</span> TK</p>
+                      <p><span id="frn1-price">185.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
                   </div>
-                  <!-- kw2 -->
-                  <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
+                  <!-- frn2 -->
+                  <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-frn2">
                     <figure class="bg-gray-200 p-4"><img src="images/prod8.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
@@ -205,17 +205,17 @@
                             <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
+                      <h2 class="card-title" id="pn-frn2">
                         Children play
                       </h2>
-                      <p><span>299.00</span> TK</p>
+                      <p><span id="frn2-price">299.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
                   </div>
-                  <!-- kw3 -->
-                  <div class="card w-72 bg-base-100 shadow-xl p-2 rounded-sm">
-                    <figure class="bg-gray-200 p-5"><img src="images/prod9.png" alt="Shoes" /></figure>
+                  <!-- frn3 -->
+                  <div class="card w-72 h-[336px] bg-base-100 shadow-xl p-2 rounded-sm cursor-pointer" id="product-frn3">
+                    <figure class="bg-gray-200 p-4"><img src="images/prod9.png" alt="Shoes" /></figure>
                     <div class="card-body text-center items-center">
                         <div class="rating">
                             <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
@@ -224,10 +224,10 @@
                             <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
                           </div>  
-                      <h2 class="card-title">
+                      <h2 class="card-title" id="pn-frn3">
                         Flexible Sofa
                       </h2>
-                      <p><span>339.00</span> TK</p>
+                      <p><span id="frn3-price">339.00</span> TK</p>
                       <div class="card-actions justify-end"> 
                       </div>
                     </div>
@@ -243,22 +243,34 @@
                 <h2 class="font-semibold text-[20px]">Have Coupon?</h2>
                 <div class="relative">
                     <input type="text" placeholder="Coupon Code" class="input input-bordered w-full pr-16" /> 
-                    <button class="btn btn-primary bg-[#E527B2] text-white absolute top-0 right-0 rounded-l-none">Apply</button>
+                    <button class="btn btn-primary bg-[#E527B2] text-white absolute top-0 right-0 rounded-l-none" id="btn-coupon" disabled>Apply</button>
                 </div>
             </div>
             
             <!-- cart details -->
             <div class="bg-white p-4">
-                <p></p>
+                <div id="product-list"></div>
                 <hr>
                 <div class="my-4 font-semibold text-[20px]">
-                    <p>Total Price: <span>0.0</span> TK</p>
-                    <p>Discount: <span>0.0</span> TK</p>
-                    <p>Total: <span>0.0</span> TK</p>
+                    <p>Total Price: <span id="total-price">0.0</span> TK</p>
+                    <p>Discount: <span id="discount">0.0</span> TK</p>
+                    <p>Total: <span id="total">0.0</span> TK</p>
                 </div>
                 <hr>
                 <div class="text-center">
-                    <button class="btn btn-primary bg-[#E527B2] text-white px-4 mt-4" type="submit" id="">Make Purchase</button>
+                    <button class="btn btn-primary bg-[#E527B2] text-white px-4 mt-4" type="submit" id="btn-purchase" onclick="my_modal_1.showModal()" disabled>Make Purchase</button>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <dialog id="my_modal_1" class="modal">
+                    <form method="dialog" class="modal-box flex flex-col items-center">
+                        <img src="images/congo.png" alt="">
+                        <h3 class="font-bold text-[25px]">Congratulations!</h3>
+                        <p class="py-3 text-[18px]">Your purchase is successful</p>
+                        <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-primary bg-[#E527B2] text-white px-4 mt-4" type="submit" id="" ">Go Home</button>
+                        </div>
+                    </form>
+                    </dialog>
                 </div>
                 
             </div>
@@ -267,5 +279,79 @@
         
     </section>
     <!-- products card and cart ends -->
+    <script src="scripts/script.js"></script>
+    <script>
+    document.getElementById('product-kw1').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-kw1');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('kw1-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-kw2').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-kw2');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('kw2-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-kw3').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-kw3');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('kw3-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-sw1').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-sw1');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('sw1-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-sw2').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-sw2');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('sw2-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-sw3').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-sw3');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('sw3-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-frn1').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-frn1');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('frn1-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-frn2').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-frn2');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('frn2-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('product-frn3').addEventListener('click', function(){
+        const product_name = getValueOfElement('pn-frn3');
+        addProductToCart(product_name);
+        const product_price = getValueOfElement('frn3-price');
+        calculateTotalPrice(product_price);
+    });
+
+    document.getElementById('btn-coupon').addEventListener('click',function(){
+      const totalPrice = getValueOfElement('total-price');
+      const totalPriceInNumber = parseFloat(totalPrice);
+      let discountValue = totalPriceInNumber*0.2;
+      document.getElementById('discount').innerText = discountValue.toFixed(2);
+      let finalTotal = totalPriceInNumber - discountValue;
+      document.getElementById('total').innerText = finalTotal.toFixed(2);
+    });
+    </script>
 </body>
 </html>
