@@ -4,12 +4,30 @@ function getValueOfElement(id){
     return elementValue;
 }
 
+function getDiscount(){
+    const couponCode = document.getElementById('coupon-code').value;
+    if(couponCode !== "SELL200") {
+      alert('Invalid Coupon');
+      return;
+    }
+    const totalPrice = getValueOfElement('total-price');
+    const totalPriceInNumber = parseFloat(totalPrice);
+    let discountValue = totalPriceInNumber*0.2;
+    document.getElementById('discount').innerText = discountValue.toFixed(2);
+    let finalTotal = totalPriceInNumber - discountValue;
+    document.getElementById('total').innerText = finalTotal.toFixed(2);
+  }
+
 function getProductData(divId, pnId, ppId){
     document.getElementById(divId).addEventListener('click', function(){
     const product_name = getValueOfElement(pnId);
     addProductToCart(product_name);
     const product_price = getValueOfElement(ppId);
-    calculateTotalPrice(product_price);
+    calculateTotalPrice(product_price); 
+    const couponCode = document.getElementById('coupon-code').value;
+    if(couponCode === 'SELL200'){
+        getDiscount();
+    }  
   });
 }
 
@@ -24,7 +42,6 @@ function addProductToCart(productName){
   }
 
 //calculate total price
-
 function calculateTotalPrice(productPrice){
     let totalPrice = getValueOfElement('total-price');
     let totalPriceInNumber = parseFloat(totalPrice);
@@ -64,15 +81,5 @@ document.getElementById('autoFill').addEventListener('click', function(){
 });
 
 document.getElementById('btn-coupon').addEventListener('click',function(){
-    const couponCode = document.getElementById('coupon-code').value;
-    if(couponCode !== "SELL200") {
-      alert('Invalid Coupon');
-      return;
-    }
-    const totalPrice = getValueOfElement('total-price');
-    const totalPriceInNumber = parseFloat(totalPrice);
-    let discountValue = totalPriceInNumber*0.2;
-    document.getElementById('discount').innerText = discountValue.toFixed(2);
-    let finalTotal = totalPriceInNumber - discountValue;
-    document.getElementById('total').innerText = finalTotal.toFixed(2);
-  });
+    getDiscount();
+});
